@@ -1,0 +1,121 @@
+@import "../../app.scss";
+
+.trainers {
+  background-color: #121212;
+  //   height: 1080px;
+  width: 100%;
+  //   overflow: auto;
+  padding-top: 72px;
+  padding-left: 98px;
+  padding-right: 98px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mobile {
+    padding: 50px 30px;
+  }
+
+  h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 91px;
+
+    @include mobile {
+      font-size: 58px;
+    }
+  }
+
+  .red {
+    color: red;
+  }
+
+  .desc {
+    font-weight: 300;
+    margin-bottom: 80px;
+    text-align: center;
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
+  }
+
+  .trainCards {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    // border: red 1px solid;
+    scrollbar-color: red transparent;
+    scrollbar-width: thin;
+
+    .trainCard {
+      position: relative;
+      min-width: 388px;
+      height: 536px;
+
+      @include mobile {
+        min-width: 70%;
+        // width: 200px;
+        height: 400px;
+      }
+
+      .imgCont {
+        width: 100%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .info {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 168px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.6);
+
+        @include mobile {
+          height: 35%;
+        }
+
+        .name {
+          font-family: "Bebas Neue", sans-serif;
+          font-size: 38px;
+          //   margin-bottom: 8px;
+          margin-top: 24px;
+
+          @include mobile {
+            font-size: 24px;
+          }
+        }
+
+        .rate {
+          font-weight: 300;
+
+          @include mobile {
+            font-size: 14px;
+          }
+        }
+
+        .stars {
+          display: flex;
+          gap: 2px;
+
+          .star {
+            width: 24px;
+            height: 24px;
+            fill: #fca600;
+          }
+        }
+      }
+    }
+  }
+}

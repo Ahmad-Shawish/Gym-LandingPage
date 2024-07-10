@@ -1,0 +1,65 @@
+@import "../../app.scss";
+
+.footer {
+  background-color: black;
+
+  .text {
+    padding: 72px 98px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    @include mobile {
+      align-items: start;
+      padding: 50px 50px;
+    }
+
+    span {
+      font-size: 32px;
+      font-family: "Bebas Neue", sans-serif;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .links {
+      display: flex;
+      gap: 40px;
+
+      @include mobile {
+        flex-direction: column;
+      }
+
+      a {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 21px;
+
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+
+  hr {
+    border-color: gray;
+  }
+
+  .copyright {
+    padding: 24px 98px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile {
+      padding: 24px 32px;
+    }
+
+    p {
+      font-size: 12px;
+      font-weight: 300;
+    }
+  }
+}

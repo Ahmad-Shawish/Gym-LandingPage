@@ -1,0 +1,141 @@
+@import "../../app.scss";
+
+.cta {
+  background-color: #121212;
+  //   height: 840px;
+  height: max-content;
+  padding: 128px 98px 38px 114px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mobile {
+    padding: 60px 30px;
+  }
+
+  .trapezoid {
+    width: 1228px;
+    // height: 674px;
+
+    // background-color: black;
+    // clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+    // clip-path: polygon(0 0, 100% 0, 89% 98%, 11% 95%);
+    // border-top: red 5px solid;
+    // border-right: red 13px solid;
+    // border-left: red 12px solid;
+    // border-bottom: red 25px solid;
+
+    position: relative;
+    // background-color: rgba(1, 1, 1, 0.5);
+
+    @include mobile {
+      width: max-content;
+    }
+
+    .trapImg {
+      position: absolute;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+
+      @include mobile {
+        // height: 50%;
+        // width: 70%;
+      }
+    }
+
+    .content {
+      display: flex;
+      gap: 40px;
+      z-index: 5;
+
+      @include mobile {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .leftImg {
+        z-index: 6;
+        translate: 0 -58px;
+
+        img {
+          @include mobile {
+            width: 100%;
+            translate: 0 20px;
+          }
+        }
+      }
+
+      .rightInfo {
+        z-index: 10;
+        padding-top: 62px;
+
+        @include mobile {
+          padding-top: 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        h3 {
+          font-family: "Bebas Neue", sans-serif;
+          font-size: 91px;
+
+          @include mobile {
+            font-size: 60px;
+          }
+        }
+        .red {
+          color: red;
+        }
+        p {
+          font-weight: 300;
+          margin-top: 16px;
+          margin-bottom: 48px;
+        }
+
+        .inputContainer {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 24px;
+          padding-right: 18%;
+
+          @include mobile {
+            flex-direction: column;
+            padding: 0;
+          }
+
+          input {
+            font-size: 16px;
+            padding: 16px 24px;
+            background-color: transparent;
+            color: white;
+            outline: none;
+            border: 1px solid white;
+
+            &::placeholder {
+              color: white;
+              font-weight: 300;
+            }
+          }
+
+          .emailInput {
+            //   margin-top: 24px;
+            margin-bottom: 24px;
+            width: 100%;
+          }
+        }
+
+        button {
+          font-family: "Bebas Neue", sans-serif;
+          font-size: 21px;
+          padding: 24px 40px;
+          color: red;
+          border: 1px red solid;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}

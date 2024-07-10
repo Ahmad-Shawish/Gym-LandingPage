@@ -1,0 +1,77 @@
+@import "../../app.scss";
+
+.hero {
+  //   height: 1024px;
+  .container {
+    width: 50%;
+    padding-left: 98px;
+    padding-top: 120px;
+
+    @include mobile {
+      width: 100%;
+      padding: 50px 32px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .title {
+      font-family: "Bebas Neue", sans-serif;
+
+      h1 {
+        font-size: 122px;
+
+        @include mobile {
+          font-size: 58px;
+        }
+      }
+      .redText {
+        color: #ff0000;
+      }
+    }
+
+    .desc {
+      color: #f1f1f1;
+      font-weight: 300;
+    }
+
+    button {
+      border: red 1px solid;
+      font-family: "Bebas Neue", sans-serif;
+      padding: 24px 40px;
+      background: transparent;
+      color: #ff0000;
+      font-size: 21px;
+      margin-top: 56px;
+      margin-bottom: 75px;
+
+      @include mobile {
+        font-size: 18px;
+        padding: 20px 32px;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    .props {
+      display: flex;
+      gap: 40px;
+      text-align: center;
+      padding-bottom: 10%;
+
+      @include mobile {
+        gap: 20px;
+      }
+
+      .redProp {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 50px;
+        color: #ff0000;
+
+        @include mobile {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
